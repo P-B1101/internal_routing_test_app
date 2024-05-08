@@ -19,7 +19,7 @@ class InternalRoutePage3 extends StatelessWidget {
             children: [
               const Text('Internal-Route-3'),
               FilledButton(
-                onPressed: () => context.go('/internal-route-page-1'),
+                onPressed: () => context.go('/${InternalRoutingConfig.instance.initialRoute}/internal-route-page-1'),
                 child: const Text('Page 1'),
               ),
               FilledButton(
