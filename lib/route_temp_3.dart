@@ -10,22 +10,25 @@ class InternalRoutePage3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.blueAccent,
-      child: Center(
-        child: Column(
-          children: [
-            const Text('Internal-Route-3'),
-            FilledButton(
-              onPressed: () => context.go('/internal-route-page-1'),
-              child: const Text('Page 1'),
-            ),
-            FilledButton(
-              onPressed: () =>
-                  context.go('/${InternalRoutingConfig.instance.initialRoute}'),
-              child: const Text('Initial Route'),
-            ),
-          ],
+    return Scaffold(
+      body: Container(
+        color: Colors.blueAccent,
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text('Internal-Route-3'),
+              FilledButton(
+                onPressed: () => context.go('/internal-route-page-1'),
+                child: const Text('Page 1'),
+              ),
+              FilledButton(
+                onPressed: () =>
+                    context.go('/${InternalRoutingConfig.instance.initialRoute}'),
+                child: const Text('Initial Route'),
+              ),
+            ],
+          ),
         ),
       ),
     );

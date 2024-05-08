@@ -14,6 +14,7 @@ class InitialRoutePage extends StatelessWidget {
         color: Colors.amber,
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text('Initial-Route'),
               FilledButton(
