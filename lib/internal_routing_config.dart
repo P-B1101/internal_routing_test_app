@@ -1,7 +1,18 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'route_temp_1.dart';
 import 'route_temp_2.dart';
 import 'route_temp_3.dart';
+
+extension GoRouterLocation on GoRouter {
+  String get location {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    return matchList.uri.toString();
+  }
+}
 
 class InternalRoutingConfig {
   InternalRoutingConfig._privateConstructor();
@@ -12,6 +23,8 @@ class InternalRoutingConfig {
   static InternalRoutingConfig get instance => _instance;
 
   final String initialRoute = 'internal-route';
+
+  String rootRoute(BuildContext context) => GoRouter.of(context).location;
 
   List<GoRoute> get routes => [
         GoRoute(
