@@ -13,17 +13,17 @@ class InternalRoutingConfig {
 
   List<GoRoute> get routes => [
         GoRoute(
-          path: '/internal-route-page-1',
+          path: 'internal-route-page-1',
           name: 'IntenalRoutePage1',
           builder: (context, state) => const InternalRoutePage1(),
         ),
         GoRoute(
-          path: '/internal-route-page-2',
+          path: 'internal-route-page-2',
           name: 'IntenalRoutePage2',
           builder: (context, state) => const InternalRoutePage2(),
         ),
         GoRoute(
-          path: '/internal-route-page-3',
+          path: 'internal-route-page-3',
           name: 'IntenalRoutePage3',
           builder: (context, state) => const InternalRoutePage3(),
         ),
