@@ -8,17 +8,19 @@ class InitialRoutePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.amber,
-      child: Center(
-        child: Column(
-          children: [
-            const Text('Initial-Route'),
-            FilledButton(
-              onPressed: () => context.go('/internal-route-page-1'),
-              child: const Text('Page 1'),
-            ),
-          ],
+    return Scaffold(
+      body: Container(
+        color: Colors.amber,
+        child: Center(
+          child: Column(
+            children: [
+              const Text('Initial-Route'),
+              FilledButton(
+                onPressed: () => context.go('/internal-route-page-1'),
+                child: const Text('Page 1'),
+              ),
+            ],
+          ),
         ),
       ),
     );
