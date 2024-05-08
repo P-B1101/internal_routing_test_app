@@ -11,6 +11,8 @@ class InternalRoutingConfig {
 
   static InternalRoutingConfig get instance => _instance;
 
+  final String initialRoute = 'internal-route';
+
   List<GoRoute> get routes => [
         GoRoute(
           path: 'internal-route-page-1',

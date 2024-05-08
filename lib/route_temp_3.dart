@@ -3,6 +3,8 @@ library internal_rounting_test_app;
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import 'internal_routing_config.dart';
+
 class InternalRoutePage3 extends StatelessWidget {
   const InternalRoutePage3({super.key});
 
@@ -17,6 +19,11 @@ class InternalRoutePage3 extends StatelessWidget {
             FilledButton(
               onPressed: () => context.go('/internal-route-page-1'),
               child: const Text('Page 1'),
+            ),
+            FilledButton(
+              onPressed: () =>
+                  context.go('/${InternalRoutingConfig.instance.initialRoute}'),
+              child: const Text('Initial Route'),
             ),
           ],
         ),
